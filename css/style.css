@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.custom-btn {
+    width: 120px;
+    height: 35px;
+    color: #fff;
+    border-radius: 5px;
+    padding: 7px 20px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
+        7px 7px 20px 0px rgba(0, 0, 0, .1),
+        4px 4px 5px 0px rgba(0, 0, 0, .1);
+    outline: none;
+}
+
+.btn {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    background: rgb(96, 9, 240);
+    background: linear-gradient(0deg, rgba(96, 9, 240, 1) 0%, rgba(129, 5, 240, 1) 100%);
+    border: none;
+}
+
+.btn:before {
+    height: 0%;
+    width: 2px;
+}
+
+.btn:hover {
+    box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, .5),
+        -4px -4px 6px 0 rgba(116, 125, 136, .5),
+        inset -4px -4px 6px 0 rgba(255, 255, 255, .2),
+        inset 4px 4px 6px 0 rgba(0, 0, 0, .4);
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hidden {
+    display: none;
+}
+
+.modal_overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .5);
+}
+
+.modal_content {
+    width: 15%;
+    padding: 20px 50px;
+    background-color: #fff;
+    text-align: center;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 3px 5px 5px rgba(0, 0, 0, .4);
+    animation-name: modalOpen;
+    animation-duration: .1s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+
+.modal_content h1 {
+    font-size: 24px;
+}
+
+.btn1 {
+    margin-top: 10px;
+    width: 40px;
+    border-radius: 5px;
+    padding: 2px 5px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
+        7px 7px 20px 0px rgba(0, 0, 0, .1),
+        4px 4px 5px 0px rgba(0, 0, 0, .1);
+}
+
+.btn1:hover {
+    box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, .5),
+        -4px -4px 6px 0 rgba(116, 125, 136, .5),
+        inset 2px -4px 6px 0 rgba(255, 255, 255, .2),
+        inset 2px 3px 5px 0 rgba(0, 0, 0, .4);
+}
+
+@keyframes modalOpen {
+    to {
+        transform: translateY(-20px);
+    }
+    from {
+        transform: translateY(0);
+    }
+}
+@media (max-width: 564px) {
+    .modal_content {
+        width: 50%;
+    }
+}
